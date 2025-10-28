@@ -30,36 +30,62 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
   margin: auto;
-}
-
-.vehicle-table, th, td {
-  border: 1px solid black;
-}
-
-.vehicle-table td:has(> .name-table) {
-  padding: 0;
 }
 
 td {
   text-align: center;
-  padding: 8px;
 }
 
 .name-table {
   border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+td:has(> .name-table) {
+  padding: 0;
+}
+
+.name-table td {
+  white-space: normal !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .name-table tr:not(:last-child) td {
   border: none;
-  border-bottom: 1px solid black
+  border-bottom: 1px solid #808080
 }
 
 .name-table tr:last-child td {
   border: none;
 }
 
-/* -----END TABLE STUFF----- */
+/* Ensure the image itself isn't shrinking or stretching weirdly */
+td img {
+  display: block;
+  width: 350px;            /* or auto if you prefer natural size */
+  height: auto;
+}
+
+td, th {
+  border: 1px solid #808080;
+  text-align: center;
+  /* padding: 8px */
+}
+
+table:not(.name-table) > tbody > tr:nth-child(even),
+table:not(.name-table) > tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.th-image {
+  width: 350px;
+  max-width: 350px;
+}
 
 div[id=footnotes] {
   text-align: justify;
