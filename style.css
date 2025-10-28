@@ -34,7 +34,7 @@ table {
 }
 
 .vehicle-table, th, td {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .vehicle-table td:has(> .name-table) {
@@ -52,7 +52,7 @@ td {
 
 .name-table tr:not(:last-child) td {
   border: none;
-  border-bottom: 2px solid black
+  border-bottom: 1px solid black
 }
 
 .name-table tr:last-child td {
@@ -64,8 +64,8 @@ td {
     -45deg,
     transparent, /* Light grey */
     transparent 10px, /* Stripe width */
-    #ffdba5 10px, /* Darker grey */
-    #ffdba5 20px /* Stripe width */
+    #ffbcbc 10px, /* Darker grey */
+    #ffbcbc 20px /* Stripe width */
   );
 }
 
