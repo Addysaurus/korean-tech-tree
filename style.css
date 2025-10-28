@@ -34,7 +34,7 @@ table {
 }
 
 .vehicle-table, th, td {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .vehicle-table td:has(> .name-table) {
@@ -43,7 +43,7 @@ table {
 
 td {
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 .name-table {
@@ -52,11 +52,26 @@ td {
 
 .name-table tr:not(:last-child) td {
   border: none;
-  border-bottom: 1px solid black
+  border-bottom: 2px solid black
 }
 
 .name-table tr:last-child td {
   border: none;
+}
+
+.speculative-name-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent, /* Light grey */
+    transparent 10px, /* Stripe width */
+    #ffdba5 10px, /* Darker grey */
+    #ffdba5 20px /* Stripe width */
+  );
+}
+
+table:not(.name-table) > tbody > tr:nth-child(even),
+table:not(.name-table) > tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 /* -----END TABLE STUFF----- */
