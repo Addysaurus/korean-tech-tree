@@ -69,14 +69,14 @@ td {
     -45deg,
     transparent, /* Light grey */
     transparent 10px, /* Stripe width */
-    #ffbcbc 10px, /* Darker grey */
-    #ffbcbc 20px /* Stripe width */
+    #dddddd 10px, /* Darker grey */
+    #dddddd 20px /* Stripe width */
   );
 }
 
 table:not(.name-table) > tbody > tr:nth-child(even),
 table:not(.name-table) > tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #c6c6c6;
 }
 
 /* -----END TABLE STUFF----- */
